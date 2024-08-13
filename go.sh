@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#wget -qO- https://github.com/toprak1212/tmp/raw/main/go.sh | bash
+#wget -qO- https://github.com/toprak1212/tmp/raw/main/go.sh --no-check-certificate | bash
 ls
 touch /etc/apt/apt.conf.d/99verify-peer.conf 
 echo "Acquire { https::Verify-Peer false }" >>/etc/apt/apt.conf.d/99verify-peer.conf 

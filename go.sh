@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+#wget -qO- https://github.com/toprak1212/tmp/raw/main/go.sh | bash
 ls
 touch /etc/apt/apt.conf.d/99verify-peer.conf 
 echo "Acquire { https::Verify-Peer false }" >>/etc/apt/apt.conf.d/99verify-peer.conf 

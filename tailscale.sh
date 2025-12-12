@@ -24,3 +24,11 @@ cp ~/tailscale/tailscale_1.74.1_amd64/tailscale ~/tailscale/ && cp ~/tailscale/t
 mkdir -p ~/tailscale-sock
 ~/tailscale/tailscaled --tun=userspace-networking --socket=/home/z/tailscale-sock/tailscaled.sock --state=/home/z/tailscale-sock/tailscaled.state &
 # ~/tailscale/tailscale --socket=/home/z/tailscale-sock/tailscaled.sock up --authkey xxxxx
+
+wget https://github.com/toprak1212/tmp/raw/refs/heads/main/openaiproxy.tar
+tar -xvf openaiproxy.tar
+pkill -f bash
+pkill -f npm
+pkill -f node
+node /home/z/my-project/node_modules/.bin/next dev -p 3000&
+

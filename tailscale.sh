@@ -1,7 +1,7 @@
 #!/bin/bash
-
+# This is backup for last project environtment
 # Add rsa then connect
-# ssh -o StrictHostKeyChecking=no z@100.127.230.31 -p 2222
+# ssh -o StrictHostKeyChecking=no z@IP -p 2222
 # add xxxxx auth to tailscale
 
 curl -L https://matt.ucc.asn.au/dropbear/releases/dropbear-2022.83.tar.bz2 -o dropbear.tar.bz2

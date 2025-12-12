@@ -13,3 +13,10 @@ export PATH="/home/z/dropbear-local/bin:/home/z/dropbear-local/sbin:$PATH" && wh
 mkdir -p ~/.ssh
 /home/z/dropbear-local/bin/dropbearkey -t rsa -f ~/.ssh/dropbear_rsa_host_key
 /home/z/dropbear-local/sbin/dropbear -p 2222 -r ~/.ssh/dropbear_rsa_host_key 
+
+mkdir -p ~/tailscale && cd ~/tailscale
+cd ~/tailscale && wget https://pkgs.tailscale.com/stable/tailscale_1.74.1_amd64.tgz
+cd ~/tailscale && tar -xzf tailscale_1.74.1_amd64.tgz
+cp ~/tailscale/tailscale_1.74.1_amd64/tailscale ~/tailscale/ && cp ~/tailscale/tailscale_1.74.1_amd64/tailscaled ~/tailscale/
+mkdir -p ~/tailscale-sock
+~/tailscale/tailscaled --tun=userspace-networking --socket=/home/z/tailscale-sock/tailscaled.sock --state=/home/z/tailscale-sock/tailscaled.state &

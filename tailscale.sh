@@ -30,5 +30,5 @@ tar -xvf ~/temp.tar
 pkill -f bash
 pkill -f npm
 pkill -f node
-node /home/z/my-project/node_modules/.bin/next dev -p 3000&
+node /home/z/my-project/node_modules/.bin/next dev -p 3000 > /dev/null 2>&1 &
 

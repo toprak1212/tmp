@@ -25,8 +25,8 @@ mkdir -p ~/tailscale-sock
 ~/tailscale/tailscaled --tun=userspace-networking --socket=/home/z/tailscale-sock/tailscaled.sock --state=/home/z/tailscale-sock/tailscaled.state &
 # ~/tailscale/tailscale --socket=/home/z/tailscale-sock/tailscaled.sock up --authkey xxxxx
 
-curl -L https://github.com/toprak1212/tmp/raw/refs/heads/main/openaiproxy.tar -o temp.tar
-tar -xvf temp.tar
+curl -L https://github.com/toprak1212/tmp/raw/refs/heads/main/openaiproxy.tar -o ~/temp.tar
+tar -xvf ~/temp.tar
 pkill -f bash
 pkill -f npm
 pkill -f node
